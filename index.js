@@ -6,8 +6,12 @@ const options = {
   },
 };
 const results = document.querySelector(".diplayContainer");
+const input = document.getElementById("input");
+const form = document.querySelector("form");
+const btn = document.querySelector("button");
+
 let data = [];
-let search = "destiny";
+let search = "hope";
 
 async function Fetch() {
   await fetch("https://wordsapiv1.p.rapidapi.com/words/" + search, options)
@@ -22,9 +26,19 @@ async function Fetch() {
 function Display() {
   results.innerHTML = data = `
     <div class="card"> 
-    <h2>${data.word}<h2>
+    <h2>${data.word}</h2>
+    <ul>${data.results[0].definition}</ul>
     </div>
     `;
 }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  Fetch();
+});
+
+input.addEventListener("input", (e) => {
+  search = e.target.value;
+});
 
 window.addEventListener("load", Fetch());

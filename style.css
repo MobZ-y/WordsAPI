@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(231, 231, 231);
+}
+.app{
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.card{
+    min-width: 260px;
+    margin: 0 auto;
+    background: rgb(177, 177, 177);
+    color: rgb(15, 15, 15);
+    border-radius: 20px;
+    padding: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.card h2{
+    color: red;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card h3{
+    display: flex;
+    justify-content: center;
+}
