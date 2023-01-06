@@ -27,7 +27,7 @@ function Display() {
   results.innerHTML = data = `
     <div class="card"> 
     <h2>${data.word}</h2>
-    <ul>${data.results[0].definition}</ul>
+    <ul> 1 - ${data.results[0].definition}</ul>
     </div>
     `;
 }
